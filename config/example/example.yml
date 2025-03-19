@@ -1,0 +1,16 @@
+name: example_service
+backups:
+  - type: daily
+    retention: 7
+  - type: weekly
+    retention: 4
+  - type: monthly
+    retention: 2
+target: host.example.com
+directories:
+  - /my/example/directory
+pre_command: >-
+  echo "This is a pre-command"
+post_command: >-
+  echo "This is a post-command"
+local_dest: /my/local/backup/directory
